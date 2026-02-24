@@ -16,6 +16,11 @@ public class Sort {
         arr[idx2] = temp;
     }
 
+    /**
+     *
+     * @param arr a non Sorted Array
+     * @param ASC type of sort
+     */
     public static void bubbleSort(int[] arr, boolean ASC) {
         for ( int i = 0; i < arr.length-1; i++ ) {
             for ( int j = 0; j < arr.length-1-i; j++ ) {
@@ -34,5 +39,14 @@ public class Sort {
     }
 
 
+    public static void mySort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
 
+            if (arr[i] > arr[i + 1]) {
+                int temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+        }
+    }
 }
